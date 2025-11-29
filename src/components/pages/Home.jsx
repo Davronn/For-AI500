@@ -102,22 +102,6 @@ export function Home({ onNavigate }) {
                   Learn to fly agricultural drones safely — WebGL simulator + AI instructor + certification.
                 </p>
               </div>
-
-              <div className="flex flex-wrap gap-4">
-                <button
-                  onClick={() => onNavigate('demo')}
-                  className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/20"
-                >
-                  Live Demo
-                </button>
-                <button
-                  onClick={() => onNavigate('simulator')}
-                  className="px-8 py-4 bg-secondary hover:bg-secondary/90 text-white rounded-xl transition-all hover:scale-105 shadow-lg shadow-secondary/20"
-                >
-                  Hozir sinab ko‘ring
-                </button>
-              </div>
-
             </div>
 
             {/* 3D drone mockup shu yerda davom etadi... */}
