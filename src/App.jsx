@@ -8,8 +8,8 @@ import { Jamoa } from "./components/pages/Jamoa";
 import { NegaBiz } from "./components/pages/NegaBiz";
 import { Roadmap } from "./components/pages/Roadmap";
 import { TechnicalSolution } from "./components/pages/TechnicalSolution";
-import { Progress } from "./components/pages/Progress";
-import { LiveDemo } from "./components/pages/LiveDemo";
+import { Footer } from "./components/pages/Footer";
+
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -40,27 +40,13 @@ export default function App() {
   return (
     <Layout currentPage={currentPage} onNavigate={scrollToSection}>
       {/* Har bir componentni <section> ichiga id bilan joylaymiz */}
-      <section id="home">
-        <Home />
-      </section>
-      <section id="problem">
-        <MuammoYechim />
-      </section>
-      <section id="team">
-        <Jamoa />
-      </section>
-      <section id="why-us">
-        <NegaBiz />
-      </section>
-      <section id="roadmap">
-        <Roadmap />
-      </section>
-      <section id="tech">
-        <TechnicalSolution />
-      </section>
-      <section id="progress">
-        <Progress />
-      </section>
+      <Home id="home" />
+      <MuammoYechim id="problem" />
+      <Jamoa id="team" />
+      <NegaBiz id="why-us" />
+      <Roadmap id="roadmap" />
+      <TechnicalSolution id="tech" />
+      <Footer id="contact" />
     </Layout>
   );
 }
