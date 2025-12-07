@@ -59,8 +59,8 @@ export function Roadmap({ isUz, id }) {
       phaseUz: "3-bosqich",
       title: "MVP Launch",
       titleUz: "MVP ishga tushirish",
-      period: "April - November 2025",
-      periodUz: "2025-yil aprel - noyabr",
+      period: "April - December 2025",
+      periodUz: "2025-yil aprel - dekabr",
       status: "current",
       icon: <Rocket className="w-8 h-8" />,
       milestones: [

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-export function Layout({ children }) {
+export function Layout({ children,isUz, setIsUz }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isUz, setIsUz] = useState(true); // default til = UZ
+
 
   const navItems = [
     { id: "home", label: "Home", labelUz: "Bosh sahifa" },

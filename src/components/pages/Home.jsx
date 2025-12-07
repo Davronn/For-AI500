@@ -9,6 +9,7 @@ import {
   Zap,
   Target,
 } from "lucide-react";
+
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 
 export function Home({ isUz, id }) {
@@ -141,22 +142,32 @@ export function Home({ isUz, id }) {
                         ? "PX4 va WebGL simulyatori + AI o'qituvchi + sertifikat bilan xavfsiz dron uchishni o‘rganing."
                         : "Learn to fly agricultural drones safely — WebGL simulator + AI instructor + certification."}
                     </p>
-                    <button
-                      onClick={() =>
-                        window.open(
-                          "https://um2p9t3szr.us-east-1.awsapprunner.com/en",
-                          "_blank",
-                          "noopener,noreferrer"
-                        )
-                      }
-                      className="px-8 py-4 mt-6 text-lg font-semibold rounded-full 
-             bg-gradient-to-r from-primary to-blue-600
-             text-white shadow-lg shadow-blue-500/30
-             hover:scale-105 hover:shadow-xl hover:shadow-blue-500/40
-             transition-all duration-300"
-                    >
-                      {isUz ? "O‘zingizni sinab ko‘ring!" : "Try It Yourself!"}
-                    </button>
+                    <section className="mt-12 flex gap-4">
+                      <button
+                        onClick={() =>
+                          window.open(
+                            "https://um2p9t3szr.us-east-1.awsapprunner.com/en",
+                            "_blank",
+                            "noopener,noreferrer"
+                          )
+                        }
+                        className="px-8 py-4 text-lg font-semibold rounded-full 
+                   bg-gradient-to-r from-primary to-blue-600
+                   text-white shadow-lg hover:scale-105 transition duration-300"
+                      >
+                        {isUz ? "O‘zingizni sinab ko‘ring" : "Try it yourself"}
+                      </button>
+
+                      <a href="/demo">
+                        <button
+                          className="px-8 py-4 text-lg font-semibold rounded-full 
+                     bg-gradient-to-r from-secondary to-purple-600
+                     text-white shadow-lg hover:scale-105 transition duration-300"
+                        >
+                          {isUz ? "Demo sahifasi" : "Demo Page"}
+                        </button>
+                      </a>
+                    </section>
                   </div>
                 </div>
 

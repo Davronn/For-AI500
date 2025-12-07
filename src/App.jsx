@@ -9,10 +9,20 @@ import { NegaBiz } from "./components/pages/NegaBiz";
 import { Roadmap } from "./components/pages/Roadmap";
 import { TechnicalSolution } from "./components/pages/TechnicalSolution";
 import { Footer } from "./components/pages/Footer";
-
+import DemoPage from "./components/pages/demo";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [isUz, setIsUz] = useState(() => {
+    // LocalStorage'dan o'qib olamiz, agar yo'q bo'lsa default true
+    return localStorage.getItem("isUz") === "false" ? false : true;
+  });
+
+  // isUz o'zgarganda LocalStorage'ga yozamiz
+  useEffect(() => {
+    localStorage.setItem("isUz", isUz);
+  }, [isUz]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -38,15 +48,32 @@ export default function App() {
   };
 
   return (
-    <Layout currentPage={currentPage} onNavigate={scrollToSection}>
-      {/* Har bir componentni <section> ichiga id bilan joylaymiz */}
-      <Home id="home" />
-      <MuammoYechim id="problem" />
-      <Jamoa id="team" />
-      <NegaBiz id="why-us" />
-      <Roadmap id="roadmap" />
-      <TechnicalSolution id="tech" />
-      <Footer id="contact" />
-    </Layout>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout
+              currentPage={currentPage}
+              onNavigate={scrollToSection}
+              isUz={isUz}
+              setIsUz={setIsUz}
+            >
+              <Home id="home" isUz={isUz} />
+              <MuammoYechim id="problem" isUz={isUz} />
+              <Jamoa id="team" isUz={isUz} />
+              <NegaBiz id="why-us" isUz={isUz} />
+              <Roadmap id="roadmap" isUz={isUz} />
+              <TechnicalSolution id="tech" isUz={isUz} />
+              <Footer id="contact" isUz={isUz} />
+            </Layout>
+          }
+        />
+        <Route
+          path="/demo"
+          element={<DemoPage isUz={isUz} setIsUz={setIsUz} />}
+        />
+      </Routes>
+    </Router>
   );
 }
