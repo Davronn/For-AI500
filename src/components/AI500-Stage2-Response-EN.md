@@ -12,14 +12,14 @@
 
 ### Core Demo Features
 
-| Feature | Description |
-|---------|-------------|
-| **3D WebGL Flight Simulator** | Real-time drone flight in browser with 60fps performance |
-| **Authentic PX4 Flight Physics** | Line-by-line port of open-source autopilot firmware |
-| **AI-Powered Flight Instructor** | GPT-4 analyzes telemetry and provides personalized feedback |
-| **Training Missions** | 4 progressive levels: Basic Hover → Circuit Flight → Precision Spray → Emergency Landing |
-| **Real-time HUD** | Live altitude, speed, battery, and position display |
-| **Dual Hour Tracking** | Simulator hours + real flight logging with instructor verification |
+| Feature                          | Description                                                                              |
+| -------------------------------- | ---------------------------------------------------------------------------------------- |
+| **3D WebGL Flight Simulator**    | Real-time drone flight in browser with 60fps performance                                 |
+| **Authentic PX4 Flight Physics** | Line-by-line port of open-source autopilot firmware                                      |
+| **AI-Powered Flight Instructor** | GPT-4 analyzes telemetry and provides personalized feedback                              |
+| **Training Missions**            | 4 progressive levels: Basic Hover → Circuit Flight → Precision Spray → Emergency Landing |
+| **Real-time HUD**                | Live altitude, speed, battery, and position display                                      |
+| **Dual Hour Tracking**           | Simulator hours + real flight logging with instructor verification                       |
 
 ### Live Demo Walkthrough
 
@@ -34,14 +34,14 @@
 
 ### Simulator Controls
 
-| Key | Action |
-|-----|--------|
-| W/S or ↑/↓ | Pitch (forward/backward) |
-| A/D or ←/→ | Yaw (rotate left/right) |
-| Q/E | Roll (tilt left/right) |
+| Key         | Action                   |
+| ----------- | ------------------------ |
+| W/S or ↑/↓  | Pitch (forward/backward) |
+| A/D or ←/→  | Yaw (rotate left/right)  |
+| Q/E         | Roll (tilt left/right)   |
 | Space/Shift | Throttle (climb/descend) |
-| Mouse | Orbit camera |
-| R | Reset camera |
+| Mouse       | Orbit camera             |
+| R           | Reset camera             |
 
 ---
 
@@ -49,13 +49,13 @@
 
 ### The Problem
 
-| Challenge | Impact |
-|-----------|--------|
-| **High Training Costs** | USD 5,000-15,000 per drone for traditional training |
-| **Geographic Barriers** | Requires in-person instruction at specialized facilities |
-| **Scalability Issues** | 1 instructor can only train a few students at a time |
-| **No Standardization** | No regional certification for agricultural drone operators |
-| **Supply-Demand Gap** | 35% CAGR in drone adoption, but certified pilots are scarce |
+| Challenge               | Impact                                                      |
+| ----------------------- | ----------------------------------------------------------- |
+| **High Training Costs** | USD 5,000-15,000 per drone for traditional training         |
+| **Geographic Barriers** | Requires in-person instruction at specialized facilities    |
+| **Scalability Issues**  | 1 instructor can only train a few students at a time        |
+| **No Standardization**  | No regional certification for agricultural drone operators  |
+| **Supply-Demand Gap**   | 35% CAGR in drone adoption, but certified pilots are scarce |
 
 ### Why This Problem Matters
 
@@ -66,11 +66,11 @@
 
 ### Our Solution
 
-| Traditional Training | Drone University |
-|---------------------|------------------|
-| $5K-15K equipment cost | **Browser-based, zero equipment** |
-| 1 instructor per student | **AI instructor scales infinitely** |
-| Location-dependent | **Train from anywhere, 24/7** |
+| Traditional Training     | Drone University                     |
+| ------------------------ | ------------------------------------ |
+| $5K-15K equipment cost   | **Browser-based, zero equipment**    |
+| 1 instructor per student | **AI instructor scales infinitely**  |
+| Location-dependent       | **Train from anywhere, 24/7**        |
 | No unified certification | **Integrated certification pathway** |
 | Weeks/months to complete | **Self-paced, accelerated learning** |
 
@@ -86,7 +86,80 @@ The demo directly addresses each problem:
 
 ---
 
-## 3. Stack, Technologies & AI Solutions
+## 3 💰 Business Model
+
+B2C (Individual Students)
+
+Free Tier:
+
+2 hours in the simulator per month
+
+Limited courses
+
+Basic missions
+
+Pro Tier ($99/month):
+
+Unlimited simulator access
+
+All courses included
+
+Certification preparation
+
+Personalized learning plans
+
+One-Time Fee:
+
+$500 – Official certification
+
+Year 1 Goal: 1,000 students → $100K MRR + $500K from certifications
+
+B2B (Corporate Licenses)
+
+Agricultural Cooperatives: $2,000/year
+
+Training for 20–50 employees
+
+Team progress dashboard
+
+Bulk certification
+
+Drone Companies: $3,000/year
+
+Pilot certification tracking
+
+Fleet management
+
+Compliance tools
+
+Equipment Dealers: $1,500/year
+
+Training offered with drone sales
+
+Partner program
+
+Year 1 Goal: 50 companies → $100K ARR
+
+B2G (Government / Institutions)
+
+Agricultural Universities: $5,000/year
+
+Training for 100+ students
+
+Academic curriculum
+
+Ministry of Agriculture: $10,000/year
+
+National drone pilot registry
+
+Certification platform
+
+Year 1 Goal: 10 institutions → $70K ARR
+
+Projected Revenue Year 1: $1.2M ARR
+Projected Revenue Year 3: $5M ARR (regional expansion)
+
+## 4. Stack, Technologies & AI Solutions
 
 ### Technology Stack Overview
 
@@ -119,58 +192,60 @@ The demo directly addresses each problem:
 
 ### Detailed Technology Breakdown
 
-| Layer | Technology | Version | Purpose |
-|-------|-----------|---------|---------|
-| **Framework** | Next.js | 16.0.3 | Server-side rendering, App Router |
-| **UI Library** | React | 19.2.0 | Component-based UI |
-| **Language** | TypeScript | 5.x | Type safety |
-| **Styling** | Tailwind CSS | 4.x | Utility-first CSS |
-| **3D Graphics** | Three.js | 0.181.1 | WebGL rendering |
-| **3D React** | React Three Fiber | 9.4.0 | React renderer for Three.js |
-| **3D Helpers** | @react-three/drei | 10.7.7 | Camera, sky, controls |
-| **State** | Zustand | 5.0.8 | Lightweight state management |
-| **Backend** | Convex | 1.29.1 | Serverless + real-time DB |
-| **AI** | OpenRouter API | - | GPT-4 flight analysis |
-| **AI SDK** | OpenAI SDK | 6.9.0 | API client |
-| **i18n** | next-intl | 4.5.5 | Multi-language (EN/RU) |
-| **Charts** | Recharts | 3.4.1 | Analytics visualization |
-| **Testing** | Puppeteer | 24.30.0 | Automated browser tests |
+| Layer           | Technology        | Version | Purpose                           |
+| --------------- | ----------------- | ------- | --------------------------------- |
+| **Framework**   | Next.js           | 16.0.3  | Server-side rendering, App Router |
+| **UI Library**  | React             | 19.2.0  | Component-based UI                |
+| **Language**    | TypeScript        | 5.x     | Type safety                       |
+| **Styling**     | Tailwind CSS      | 4.x     | Utility-first CSS                 |
+| **3D Graphics** | Three.js          | 0.181.1 | WebGL rendering                   |
+| **3D React**    | React Three Fiber | 9.4.0   | React renderer for Three.js       |
+| **3D Helpers**  | @react-three/drei | 10.7.7  | Camera, sky, controls             |
+| **State**       | Zustand           | 5.0.8   | Lightweight state management      |
+| **Backend**     | Convex            | 1.29.1  | Serverless + real-time DB         |
+| **AI**          | OpenRouter API    | -       | GPT-4 flight analysis             |
+| **AI SDK**      | OpenAI SDK        | 6.9.0   | API client                        |
+| **i18n**        | next-intl         | 4.5.5   | Multi-language (EN/RU)            |
+| **Charts**      | Recharts          | 3.4.1   | Analytics visualization           |
+| **Testing**     | Puppeteer         | 24.30.0 | Automated browser tests           |
 
 ### AI Solutions Implemented
 
 #### 1. AI Flight Instructor (GPT-4)
 
 **How It Works:**
+
 ```
 Flight Completed → Telemetry Recorded → AI Analysis → Personalized Feedback
 ```
 
 **AI Capabilities:**
 
-| Feature | Description |
-|---------|-------------|
+| Feature                  | Description                                                     |
+| ------------------------ | --------------------------------------------------------------- |
 | **Performance Analysis** | Evaluates altitude stability, speed control, battery efficiency |
-| **Safety Detection** | Identifies 5 violation types in real-time |
-| **Scoring** | 0-100 score based on objectives + safety + efficiency |
-| **Strengths** | 3-5 specific things the student did well |
-| **Improvements** | 2-3 actionable recommendations with techniques |
-| **Readiness Assessment** | Determines if ready for next difficulty level |
+| **Safety Detection**     | Identifies 5 violation types in real-time                       |
+| **Scoring**              | 0-100 score based on objectives + safety + efficiency           |
+| **Strengths**            | 3-5 specific things the student did well                        |
+| **Improvements**         | 2-3 actionable recommendations with techniques                  |
+| **Readiness Assessment** | Determines if ready for next difficulty level                   |
 
 #### 2. Safety Violation Detection
 
 ```typescript
 const safetyViolations = {
-  overspeed:      speed > 15,              // m/s
-  lowAltitude:    altitude < 0.8,          // meters
-  lowBatteryFar:  battery < 20 && distance > 50,
-  rapidDescent:   verticalSpeed < -5,      // m/s
-  sharpTurn:      yawRate > 45             // degrees/second
+  overspeed: speed > 15, // m/s
+  lowAltitude: altitude < 0.8, // meters
+  lowBatteryFar: battery < 20 && distance > 50,
+  rapidDescent: verticalSpeed < -5, // m/s
+  sharpTurn: yawRate > 45, // degrees/second
 };
 ```
 
 #### 3. Telemetry Processing
 
 The AI analyzes 50+ data points per flight:
+
 - Position (X, Y, Z coordinates)
 - Attitude (roll, pitch, yaw angles)
 - Velocity and acceleration
@@ -194,6 +269,7 @@ We ported the **actual PX4 autopilot algorithms (v1.14.3)** to run in-browser:
 ```
 
 **Why This Matters:**
+
 - Same algorithms used in commercial drones (DJI Agras, etc.)
 - Realistic flight behavior (hovers at ~88% throttle)
 - Motor saturation causes realistic altitude loss during aggressive maneuvers
@@ -202,7 +278,7 @@ We ported the **actual PX4 autopilot algorithms (v1.14.3)** to run in-browser:
 
 ---
 
-## 4. Roadmap Stage & Next Steps
+## 5. Roadmap Stage & Next Steps
 
 ### Current Stage: MVP (95% Complete)
 
@@ -215,28 +291,30 @@ Idea ──────> Prototype ──────> [MVP] ──────>
 
 ### Development Progress
 
-| Component | Status | Completion |
-|-----------|--------|------------|
-| 3D Flight Simulator | Complete | 100% |
-| PX4 Flight Physics | Complete | 100% |
-| AI Flight Instructor | Complete | 100% |
-| Training Missions (4) | Complete | 100% |
-| Progress Tracking | Complete | 100% |
-| Multi-language (EN/RU) | Complete | 100% |
-| User Authentication | In Progress | 80% |
-| Payment Integration | Planned | 0% |
-| Mobile Optimization | Planned | 30% |
-| **Overall MVP** | **Near Complete** | **95%** |
+| Component              | Status            | Completion |
+| ---------------------- | ----------------- | ---------- |
+| 3D Flight Simulator    | Complete          | 100%       |
+| PX4 Flight Physics     | Complete          | 100%       |
+| AI Flight Instructor   | Complete          | 100%       |
+| Training Missions (4)  | Complete          | 100%       |
+| Progress Tracking      | Complete          | 100%       |
+| Multi-language (EN/RU) | Complete          | 100%       |
+| User Authentication    | In Progress       | 80%        |
+| Payment Integration    | Planned           | 0%         |
+| Mobile Optimization    | Planned           | 30%        |
+| **Overall MVP**        | **Near Complete** | **95%**    |
 
 ### What's Already Working
 
 #### Core Platform
+
 - [x] Landing page with feature overview
 - [x] Interactive dashboard with user personas
 - [x] Internationalization (English, Russian)
 - [x] Responsive design
 
 #### Flight Simulator
+
 - [x] Full 3D WebGL environment at 60fps
 - [x] PX4 flight controller (authentic algorithms)
 - [x] Professional drone model (PX4 Iris)
@@ -247,6 +325,7 @@ Idea ──────> Prototype ──────> [MVP] ──────>
 - [x] Multiple camera modes
 
 #### AI Integration
+
 - [x] Post-flight analysis endpoint
 - [x] GPT-4 feedback generation
 - [x] Safety violation detection
@@ -254,6 +333,7 @@ Idea ──────> Prototype ──────> [MVP] ──────>
 - [x] Personalized recommendations
 
 #### Training System
+
 - [x] 4 training missions (Beginner → Advanced)
 - [x] Skills breakdown (6 core skills)
 - [x] Achievement system
@@ -262,46 +342,46 @@ Idea ──────> Prototype ──────> [MVP] ──────>
 
 ### Next Steps (Immediate)
 
-| Priority | Task | Timeline |
-|----------|------|----------|
-| 1 | Deploy to production (AWS App Runner) | Week 1 |
-| 2 | Add gamepad controller support | Week 2 |
-| 3 | Implement FPV camera mode | Week 2 |
-| 4 | Complete Stripe payment integration | Week 3 |
-| 5 | Add Uzbek language support | Week 3 |
+| Priority | Task                                  | Timeline |
+| -------- | ------------------------------------- | -------- |
+| 1        | Deploy to production (AWS App Runner) | Week 1   |
+| 2        | Add gamepad controller support        | Week 2   |
+| 3        | Implement FPV camera mode             | Week 2   |
+| 4        | Complete Stripe payment integration   | Week 3   |
+| 5        | Add Uzbek language support            | Week 3   |
 
 ### Roadmap Phases
 
-| Phase | Status | Key Deliverables |
-|-------|--------|------------------|
-| **Phase 1 - MVP** | **95%** | 3D simulator, PX4 physics, AI instructor, progress tracking |
-| **Phase 2 - Launch** | Planned | Production deployment, payments, mobile app |
-| **Phase 3 - Expansion** | Planned | Kazakhstan, Kyrgyzstan, Tajikistan markets |
-| **Phase 4 - Advanced** | Planned | VR support, multiplayer, blockchain certificates |
+| Phase                   | Status  | Key Deliverables                                            |
+| ----------------------- | ------- | ----------------------------------------------------------- |
+| **Phase 1 - MVP**       | **95%** | 3D simulator, PX4 physics, AI instructor, progress tracking |
+| **Phase 2 - Launch**    | Planned | Production deployment, payments, mobile app                 |
+| **Phase 3 - Expansion** | Planned | Kazakhstan, Kyrgyzstan, Tajikistan markets                  |
+| **Phase 4 - Advanced**  | Planned | VR support, multiplayer, blockchain certificates            |
 
 ### Business Milestones
 
-| Milestone | Target |
-|-----------|--------|
-| Beta Launch | 50 pilot students in Uzbekistan |
-| Enterprise Pilots | 3-5 agricultural cooperatives |
-| Official Recognition | Partnership with Ministry of Agriculture |
-| Year 1 ARR | $1.2M (1,000 students + 50 enterprise accounts) |
-| Year 3 ARR | $5M with regional expansion |
+| Milestone            | Target                                          |
+| -------------------- | ----------------------------------------------- |
+| Beta Launch          | 50 pilot students in Uzbekistan                 |
+| Enterprise Pilots    | 3-5 agricultural cooperatives                   |
+| Official Recognition | Partnership with Ministry of Agriculture        |
+| Year 1 ARR           | $1.2M (1,000 students + 50 enterprise accounts) |
+| Year 3 ARR           | $5M with regional expansion                     |
 
 ---
 
 ## Summary
 
-| Question | Answer |
-|----------|--------|
+| Question                 | Answer                                                              |
+| ------------------------ | ------------------------------------------------------------------- |
 | **What is being shown?** | Browser-based 3D drone flight simulator with AI-powered instruction |
-| **Problem solved?** | Expensive, inaccessible drone pilot training in Central Asia |
-| **Key technologies?** | Next.js, Three.js, PX4 port, GPT-4, Convex |
-| **AI solutions?** | Flight analysis, safety detection, personalized coaching |
-| **Roadmap stage?** | MVP (95% complete) |
-| **Next steps?** | Production deployment, payments, regional expansion |
+| **Problem solved?**      | Expensive, inaccessible drone pilot training in Central Asia        |
+| **Key technologies?**    | Next.js, Three.js, PX4 port, GPT-4, Convex                          |
+| **AI solutions?**        | Flight analysis, safety detection, personalized coaching            |
+| **Roadmap stage?**       | MVP (95% complete)                                                  |
+| **Next steps?**          | Production deployment, payments, regional expansion                 |
 
 ---
 
-*Document prepared for AI500! Stage 2 - December 2025*
+_Document prepared for AI500! Stage 2 - December 2025_
