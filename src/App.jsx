@@ -11,6 +11,7 @@ import { TechnicalSolution } from "./components/pages/TechnicalSolution";
 import { Footer } from "./components/pages/Footer";
 import DemoPage from "./components/pages/demo";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Finance from "./components/pages/finance";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -61,6 +62,7 @@ export default function App() {
             >
               <Home id="home" isUz={isUz} />
               <MuammoYechim id="problem" isUz={isUz} />
+              <Finance id="finance" isUz={isUz} />
               <Jamoa id="team" isUz={isUz} />
               <NegaBiz id="why-us" isUz={isUz} />
               <Roadmap id="roadmap" isUz={isUz} />

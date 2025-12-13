@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-export function Layout({ children,isUz, setIsUz }) {
+export function Layout({ children, isUz, setIsUz }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-
 
   const navItems = [
     { id: "home", label: "Home", labelUz: "Bosh sahifa" },
     { id: "problem", label: "Problem & Solution", labelUz: "Muammo va Yechim" },
+    { id: "finance", label: "Finance", labelUz: "Moliya" },
     { id: "team", label: "Team", labelUz: "Jamoa" },
     { id: "why-us", label: "Why us", labelUz: "Nega biz" },
     { id: "roadmap", label: "Road Map", labelUz: "Yo'l xaritasi" },
