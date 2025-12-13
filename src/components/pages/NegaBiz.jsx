@@ -87,8 +87,8 @@ export function NegaBiz({ isUz, id }) {
     {
       feature: "Cost",
       featureUz: "Narx",
-      us: "$49/month subscription",
-      usUz: "Oylik $49 obuna",
+      us: "$99/month subscription",
+      usUz: "Oylik $99 obuna",
       competitors: "$10,000+ upfront investment",
       competitorsUz: "$10,000+ dastlabki sarmoya",
     },
